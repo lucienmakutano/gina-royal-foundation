@@ -278,8 +278,9 @@ nav a.active {
 
 /* Hero Section */
 #hero {
-    background: linear-gradient(135deg, rgba(139, 71, 137, 0.95) 0%, rgba(107, 52, 105, 0.95) 100%),
-                url('https://images.pexels.com/photos/6646918/pexels-photo-6646918.jpeg?auto=compress&cs=tinysrgb&w=1920') center/cover;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     padding: 120px 0;
     text-align: center;
     border-bottom: 4px solid var(--secondary-color);
@@ -287,16 +288,18 @@ nav a.active {
     overflow: hidden;
 }
 
-#hero::before {
+#hero::after {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.3) 100%);
+    background: linear-gradient(135deg, rgba(139, 71, 137, 0.55) 0%, rgba(107, 52, 105, 0.55) 100%);
     pointer-events: none;
+    z-index: 0;
 }
+
 
 .hero-content {
     position: relative;
