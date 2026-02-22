@@ -94,6 +94,10 @@ header {
     gap: 24px;
 }
 
+.logo {
+    min-width: 260px;
+}
+
 .logo h1 {
     color: var(--text-light);
     font-size: 1.8rem;
@@ -111,8 +115,12 @@ header {
 nav ul {
     display: flex;
     list-style: none;
-    gap: 32px;
-    flex-wrap: wrap;
+    gap: 24px;
+    flex-wrap: nowrap;
+}
+
+nav {
+    margin-left: auto;
 }
 
 nav a {
@@ -133,6 +141,40 @@ nav a.active {
     font-weight: 600;
     border-bottom: 2px solid var(--secondary-color);
     padding-bottom: 4px;
+}
+
+.language-switcher {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.header-controls {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.language-switcher button {
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    background: rgba(255, 255, 255, 0.12);
+    color: var(--text-light);
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.language-switcher button:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.language-switcher button.active {
+    background: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: var(--text-dark);
 }
 
 /* Mobile Menu Toggle */
@@ -633,6 +675,8 @@ footer p {
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.3s ease;
+        border-radius: 0 0 10px 10px;
+        z-index: 1001;
     }
 
     nav.active {
@@ -659,9 +703,29 @@ footer p {
     }
 
     .header-content {
-        flex-direction: column;
-        text-align: center;
+        text-align: left;
         position: relative;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+    }
+
+    .logo {
+        min-width: 0;
+        flex: 1;
+    }
+
+    .logo h1 {
+        font-size: 1.4rem;
+    }
+
+    .header-controls {
+        gap: 10px;
+    }
+
+    .language-switcher button {
+        padding: 5px 9px;
+        font-size: 0.8rem;
     }
 
     .back-to-top {
@@ -736,7 +800,16 @@ footer p {
     }
 
     .logo h1 {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
+    }
+
+    .tagline {
+        font-size: 0.8rem;
+    }
+
+    .header-controls {
+        width: 100%;
+        justify-content: space-between;
     }
 
     nav ul {
