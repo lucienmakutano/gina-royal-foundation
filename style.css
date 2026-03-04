@@ -1100,6 +1100,37 @@ footer p {
     color: var(--secondary-color);
 }
 
+.contact-social-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.icon-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: var(--text-light);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.icon-link svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+.icon-link:hover {
+    color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
 .copyright {
     text-align: center;
     padding-top: 24px;
